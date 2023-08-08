@@ -1,15 +1,15 @@
-prime = 17;
+prime = 19;
 
 [nil_points, split_points, field_points] = fpPlanePoints(prime);
 
-figure('Name', 'Nilpotent Points')
-plotPlanePoints(nil_points, 'red');
+%figure('Name', 'Nilpotent Points')
+%plotPlanePoints(nil_points, 'red');
 
-figure('Name', 'Split Points')
-plotPlanePoints(split_points, 'green');
+%figure('Name', 'Split Points')
+%plotPlanePoints(split_points, 'green');
 
-figure('Name', 'Field Points')
-plotPlanePoints(field_points, 'blue');
+%figure('Name', 'Field Points')
+%plotPlanePoints(field_points, 'blue');
 
 figure('Name', 'All Points')
 view(3);
@@ -55,7 +55,7 @@ function [nil_points, split_points, field_points] = fpPlanePoints(p)
 end
 
 function scatterPlot = plotPlanePoints(points, color)
-    scatterPlot = scatter3(points(:, 1), points(:, 2), points(:, 3), 1000, color, '.');
+    scatterPlot = scatter3(points(:, 1), points(:, 2), points(:, 3), 5000, color, '.');
     
     xlabel('i')
     ylabel('j')
